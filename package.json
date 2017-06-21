@@ -1,0 +1,70 @@
+{
+  "name": "grev",
+  "productName": "grev",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "lint": "standard",
+    "lint-fix": "standard --fix"
+  },
+  "keywords": [],
+  "author": "evance.soumaoro",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {},
+      "electronWinstallerConfig": {
+        "name": "grev"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "grev"
+      }
+    }
+  },
+  "dependencies": {
+    "electron-compile": "^6.4.1",
+    "electron-devtools-installer": "^2.2.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-hot-loader": "^3.0.0-beta.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "electron-forge": "^3.0.5",
+    "electron-prebuilt-compile": "1.6.11",
+    "standard": "^10.0.2"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "src/schemas/output"
+    ]
+  }
+}
